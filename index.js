@@ -65,7 +65,7 @@ let productos = [
         id: 08,
         nombre: "Oleo para barba",
         precio: 550,
-        descripcion: "Óleo Formulado con mezcla de aceites que promueven el crecimiento del bello de la barba",
+        descripcion: "Óleo Formulado con mezcla de aceites que promueven el crecimiento del vello de la barba",
         tipo: "oleo",
         oferta: false,
     },
@@ -134,7 +134,6 @@ let buscar = prompt("Ingrese que tipo de producto desea ver: cera, pomada, oleo,
 let muestra = productos.find ((busqueda) => {
     return busqueda.tipo==buscar.toLocaleLowerCase()}
     )
-    console.log(`Los productos disponibles son:`, muestra)
-    alert(`Los productos disponibles son:`, muestra)    
+    alert(`Producto disponible: ${muestra.nombre.toString()}, su precio es de: ${muestra.precio.toString()}. ` +`\n` + `descripción del producto: ${muestra.descripcion.toString()} .` )    
 }
 verProductoSeleccionado (productos)
